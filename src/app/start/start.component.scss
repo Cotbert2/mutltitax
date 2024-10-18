@@ -20,9 +20,12 @@
 }
 
 .button{
-    border: solid 5px #F15A29;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 90%;
-    height: 80%;
+    border: solid 5px #F15A29;
+    height: 90%;
 }
 
 button{
@@ -31,13 +34,7 @@ button{
     font-family: 'stud-chaos', sans-serif;
     padding: 2rem;
     font-size: 3rem;
-    width: 83%;
+    width: 100%;
 
-    position: fixed;
-    //center with position fixed
-    bottom: 30%;
-    left: 0;
-    right: 0;
-    margin: 0 auto;
 
 }

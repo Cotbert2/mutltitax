@@ -13,7 +13,7 @@ export class StartComponent  implements OnInit {
 
   start() : void {
     console.log('Starting application');
-    
+    window.location.href = '/base';
   }
 
 }
