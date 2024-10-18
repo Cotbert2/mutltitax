@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import { SplashScreenComponent } from './splash-screen/splash-screen.component';
+import { StartComponent } from './start/start.component';
 
 const routes: Routes = [
   {
@@ -11,6 +13,13 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'splash-screen',
+    component: SplashScreenComponent
+  },{
+    path: 'start',
+    component: StartComponent
+  }
 ];
 
 @NgModule({

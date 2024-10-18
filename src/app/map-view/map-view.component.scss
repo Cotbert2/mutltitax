@@ -1,0 +1,26 @@
+.map-container{
+    background-color: blue;
+    position: relative;
+    display: inline-block;
+}
+
+.map-container img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.change{
+    bottom: 1rem;
+    left: 1rem;
+    background-color: #000000;
+    color: white;
+    padding: 1rem;
+    cursor: pointer;
+    width: 1rem;
+}
+
+.map{
+    width: 10rem;
+    height: auto;
+}

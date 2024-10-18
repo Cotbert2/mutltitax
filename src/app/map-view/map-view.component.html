@@ -1,0 +1,8 @@
+<div class="map-container">
+  <section class="map" (scroll)="true">
+    <img [src]="image_1" alt="map image" [ngStyle]="{ 'transform' : zoomInFlag ? 'scale(1.5)' : 'scale(1)' }"/>
+  </section>
+  <button class="change" class="changeView" (click)="changeView()">Change</button>
+  <button (click)="zoomIn()">Zoom in</button>
+  <button>Zoon out</button>
+</div>

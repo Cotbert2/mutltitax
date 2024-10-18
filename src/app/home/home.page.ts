@@ -7,6 +7,13 @@ import { Component } from '@angular/core';
 })
 export class HomePage {
 
+  mapsUrl : string [] = [
+    'assets/mapa.jpeg',
+    'assets/mapa2.jpeg',
+    'assets/mapa3.jpeg',
+    'assets/mapa4.jpeg'
+  ];
+
   constructor() {}
 
 }
