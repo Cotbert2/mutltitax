@@ -1,19 +1,19 @@
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import { IonicModule } from '@ionic/angular';
 
-import { BaseComponent } from './base.component';
+import { FullControlComponent } from './full-control.component';
 
-describe('BaseComponent', () => {
-  let component: BaseComponent;
-  let fixture: ComponentFixture<BaseComponent>;
+describe('FullControlComponent', () => {
+  let component: FullControlComponent;
+  let fixture: ComponentFixture<FullControlComponent>;
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [ BaseComponent ],
+      declarations: [ FullControlComponent ],
       imports: [IonicModule.forRoot()]
     }).compileComponents();
 
-    fixture = TestBed.createComponent(BaseComponent);
+    fixture = TestBed.createComponent(FullControlComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   }));
