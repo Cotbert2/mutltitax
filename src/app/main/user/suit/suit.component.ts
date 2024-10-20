@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
+
 @Component({
   selector: 'app-suit',
   templateUrl: './suit.component.html',
@@ -9,6 +10,8 @@ export class SuitComponent  implements OnInit {
 
   constructor() { }
 
-  ngOnInit() {}
+  ngOnInit() {
+
+  }
 
 }

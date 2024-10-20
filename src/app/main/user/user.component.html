@@ -1,6 +1,7 @@
 <div class="container">
   <app-default *ngIf="userStatus == 'default'"></app-default>
-  <app-place *ngIf="userStatus=='place'"></app-place>
+  <app-place *ngIf="userStatus=='place'"></app-place> 
+  <app-suit *ngIf="userStatus == 'suit'"></app-suit>
   <div class="buttons">
     <button (click)="changeUserStatus('default')">general</button>
     <button (click)="changeUserStatus('place')">place</button>
