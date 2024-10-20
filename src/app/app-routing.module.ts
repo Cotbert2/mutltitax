@@ -24,10 +24,17 @@ const routes: Routes = [
   }, {
     path: 'base',
     component: BaseComponent
+  },
+  {
+    path: 'main',
+    loadChildren: () => import('./main/main.module').then( m => m.MainPageModule)
   }
 ];
 
 @NgModule({
+  declarations: [
+    
+  ],
   imports: [
     RouterModule.forRoot(routes, { preloadingStrategy: PreloadAllModules })
   ],

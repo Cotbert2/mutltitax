@@ -1,0 +1,105 @@
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+}
+
+
+.spaceman{
+    width: 12rem;
+    height: auto;
+}
+
+.blue-spot{
+    width: 1rem;
+    height: 1rem;
+    background-color: #135CBB;
+    margin: 0px 0.1rem;
+}
+
+.spot-colection{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+p{
+    font-family: 'stud-chaos', sans-serif;
+    color: #ffffff;
+    font-size: 1.5rem;
+}
+
+table{
+    border-collapse: collapse;
+    border: solid 0.2rem #F15A29;
+    width: 90%;
+    margin-right: 1rem;
+}
+
+tr{
+    border-bottom: solid 0.2rem #F15A29;
+}
+
+thead{
+    border-bottom: solid 0.2rem #F15A29;
+
+}
+
+thead{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+hr{
+    border: solid 2px #F15A29;
+    width: 90%;
+}
+
+.signals-default{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.planet{
+    width: 10rem;
+    height: auto;
+}
+
+
+
+.bars-cointer{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+}
+
+.bars{
+    width: 5rem;
+}
+
+.pulso{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.pulso img{
+    width: 1.4rem;
+    height: 1.4rem;
+}
+
+.pulso p{
+    font-size: 1rem;
+    margin-left: 1rem;
+}
+
+.time{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

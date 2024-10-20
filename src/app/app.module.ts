@@ -10,11 +10,12 @@ import { AppRoutingModule } from './app-routing.module';
 
 import { MapViewComponent } from './map-view/map-view.component';
 import { SplashScreenComponent } from './splash-screen/splash-screen.component';
+import { GreetingComponent } from './base/greeting/greeting.component';
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, GreetingComponent],
   imports: [BrowserModule,  IonicModule.forRoot(), AppRoutingModule],
-  providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
+  providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy },],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
