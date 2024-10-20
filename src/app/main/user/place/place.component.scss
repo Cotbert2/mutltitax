@@ -1,0 +1,33 @@
+.container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.spaceman{
+    width: 12rem;
+    height: auto;
+}
+
+.planets{
+    width: 70%;
+}
+
+.planet{
+
+    width: 12rem;
+    height: auto;
+}
+
+p{
+    font-family: 'stud-chaos', sans-serif;
+    color: #ffffff;
+    font-size: 0.6rem;
+}
+
+section{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

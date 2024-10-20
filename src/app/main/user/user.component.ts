@@ -7,10 +7,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UserComponent  implements OnInit {
 
-  status : string = 'default';
+  userStatus : string = 'default';
+
+  status : string = 'place';
 
   constructor() { }
 
   ngOnInit() {}
+
+  changeUserStatus (newUserStatus : string) : void {
+    this.userStatus = newUserStatus;
+  }
 
 }

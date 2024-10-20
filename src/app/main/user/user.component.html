@@ -1,8 +1,9 @@
 <div class="container">
-  <app-default *ngIf="status == 'default'"></app-default>
+  <app-default *ngIf="userStatus == 'default'"></app-default>
+  <app-place *ngIf="userStatus=='place'"></app-place>
   <div class="buttons">
-    <button>general</button>
-    <button>place</button>
-    <button>suit</button>
+    <button (click)="changeUserStatus('default')">general</button>
+    <button (click)="changeUserStatus('place')">place</button>
+    <button (click)="changeUserStatus('suit')">suit</button>
   </div>
 </div>

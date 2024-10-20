@@ -33,7 +33,7 @@
 button{
     font-family: 'stud-chaos', sans-serif;
     font-size: 2rem;
-    margin: 0.5rem 0.5rem;
+    margin: 0px 0.5rem 1rem 0;
     background-color: rgb(241,90,41,0.8);
     height: 4rem;
     width: 12rem;
@@ -43,6 +43,7 @@ button{
 
 .buttons{
     width: 30%;
+    height: 100%;
 }
 .pannel{
     width: 70%;

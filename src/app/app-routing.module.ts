@@ -8,11 +8,11 @@ import { BaseComponent } from './base/base.component';
 const routes: Routes = [
   {
     path: 'home',
-    loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
+    loadChildren: () => import('./splash-screen/splash-screen.component').then( m => m.SplashScreenComponent)
   },
   {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'splash-screen',
     pathMatch: 'full'
   },
   {

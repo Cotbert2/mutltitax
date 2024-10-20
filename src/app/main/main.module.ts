@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
+import { ControlContainer, FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
@@ -12,6 +12,9 @@ import { ComunityContentComponent } from './comunity-content/comunity-content.co
 import { CommunitySectionComponent } from './comunity-content/community-section/community-section.component';
 import { UserComponent } from './user/user.component';
 import { DefaultComponent } from './user/default/default.component';
+import { PlaceComponent } from './user/place/place.component';
+import { MapsComponent } from './maps/maps.component';
+import { ControlsComponent } from './controls/controls.component';
 
 @NgModule({
   imports: [
@@ -26,6 +29,9 @@ import { DefaultComponent } from './user/default/default.component';
      ComunityContentComponent,
      UserComponent,
       DefaultComponent,
+      PlaceComponent,
+      MapsComponent,
+      ControlsComponent,
     CommunitySectionComponent]
 })
 export class MainPageModule {}

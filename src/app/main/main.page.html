@@ -9,19 +9,20 @@
       <section class="interaction">
         <div class="buttons">
           <!--Delete opacy if is Selected-->
-          <button>Community</button>
-          <button>Controls</button>
-          <button>Maps</button>
-          <button>User</button>
+          <button (click)="changeStatus('Community')">Community</button>
+          <button (click)="changeStatus('Controls')">Controls</button>
+          <button (click)="changeStatus('Maps')">Maps</button>
+          <button (click)="changeStatus('User')">User</button>
         </div>
         <div class="pannel">
           <!--
-            <app-greeting></app-greeting>
             -->
             <!--
-              <app-comunity-content></app-comunity-content>
               -->
-              <app-user></app-user>
+              
+              <app-greeting *ngIf="generalStatus=='welcome' "></app-greeting>
+              <app-comunity-content *ngIf="generalStatus == 'Community'"></app-comunity-content>
+              <app-user *ngIf="generalStatus == 'User'"></app-user>
         </div>
       </section>
 

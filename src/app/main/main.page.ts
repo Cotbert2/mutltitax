@@ -7,9 +7,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MainPage implements OnInit {
 
+  generalStatus : string = 'welcome';
+
   constructor() { }
 
   ngOnInit() {
+  }
+
+
+  changeStatus(newStatus : string) : void {
+    this.generalStatus = newStatus;
   }
 
 }
