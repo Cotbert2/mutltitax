@@ -19,7 +19,7 @@
             -->
             <!--
               -->
-              
+              <app-controls *ngIf="generalStatus == 'Controls'"></app-controls>
               <app-greeting *ngIf="generalStatus=='welcome' "></app-greeting>
               <app-comunity-content *ngIf="generalStatus == 'Community'"></app-comunity-content>
               <app-user *ngIf="generalStatus == 'User'"></app-user>

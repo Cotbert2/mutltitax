@@ -15,6 +15,7 @@ import { DefaultComponent } from './user/default/default.component';
 import { PlaceComponent } from './user/place/place.component';
 import { MapsComponent } from './maps/maps.component';
 import { ControlsComponent } from './controls/controls.component';
+import { SuitComponent } from './user/suit/suit.component';
 
 @NgModule({
   imports: [
@@ -32,6 +33,7 @@ import { ControlsComponent } from './controls/controls.component';
       PlaceComponent,
       MapsComponent,
       ControlsComponent,
+      SuitComponent,
     CommunitySectionComponent]
 })
 export class MainPageModule {}
