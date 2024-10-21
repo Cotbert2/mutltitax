@@ -9,11 +9,11 @@
 
       <div class="planet-container">
         <canvas class="planet-viewer" #canvas width="400" height="400"></canvas>
-        
+
         <div class="controlls">
           <section class="df">
             <section>
-                <button>
+                <button (click)="moveImage(-steps, 0)">
                   <img src="assets/left.png" alt="">
                 </button>
               </section>
@@ -21,17 +21,17 @@
               <section class="vertical-buttons">
                 <div>
 
-                  <button>
+                  <button (click)="moveImage(0, -steps)">
                     <img src="assets/up.png" alt="">
                   </button>
-                  <button>
+                  <button (click)="moveImage(0, steps)">
                     <img src="assets/down.png" alt="">
                   </button>
                 </div>
               </section>
 
               <section>
-                <button>
+                <button (click)="moveImage(steps, 0)">
                   <img src="assets/right.png" alt="">
                 </button>
               </section>
@@ -39,5 +39,22 @@
         </div>
       </div>
     </div>
+  </div>
+  <div>
+
+    <button class="shift">
+      <section class="location-container">
+        <img src="assets/shift.png" alt="shift">
+      </section>
+
+
+      <button class="location">
+        <p>{{location}}</p>
+      </button>
+    </button>
+    <div class="closex">
+      <p class="close" (click)="close()">X</p>
+    </div>
+
   </div>
 </div>

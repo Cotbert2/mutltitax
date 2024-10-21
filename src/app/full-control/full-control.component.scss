@@ -73,3 +73,41 @@ button{
     bottom: 10%;
     left: 17%;
 }
+
+.shift{
+    position: absolute;
+    right: 16%;
+    bottom: 13%;
+
+    width: 10rem;
+}
+
+.location{
+    width: 100%;
+    font-family: 'stud-chaos', sans-serif;
+    font-size: 1rem;
+    background-color: #F15A29;
+    color: white;
+    border-radius: 0px 0px 1rem 0px;
+}
+
+.location-container{
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.closex {
+    position: absolute;
+    right: 12%;
+    top: 13%;
+}
+
+.closex p{
+    width: 4rem;
+    font-family: 'stud-chaos', sans-serif;
+    color: #000000;
+    font-size: 2rem;
+}
+

@@ -9,6 +9,9 @@ export class FullControlComponent  implements OnInit {
 
   @ViewChild('canvas', {static: false}) canvas!: ElementRef<HTMLCanvasElement>;
 
+
+  location : string = '1-22-343';
+
   //setup context variables for the viewer
   ctx: any;
   img : HTMLImageElement = new Image();
@@ -36,6 +39,14 @@ export class FullControlComponent  implements OnInit {
 
   ngOnInit() {
     console.log('Full control component loaded');
+    
+    setInterval(() => {
+      this.formLocation();
+    }, 1000);
+  }
+
+  formLocation () : void {
+    this.location = `${this,this.getRandomNumber(0,9)}-${this,this.getRandomNumber(10,99)}-${this.getRandomNumber(100,999)}`;
   }
 
 
@@ -52,4 +63,18 @@ export class FullControlComponent  implements OnInit {
     }
   }
 
+  getRandomNumber(min : number, max : number) : number {
+    return Math.floor(Math.random() * (max - min + 1) + min);
+  }
+
+  close () : void {
+    window.location.href = '/main';
+  }
+
+
+  moveImage(xIncrement : number, yIncrement : number) : void {
+    this.ypos += yIncrement;
+    this.xpos += xIncrement;
+    this.drawImage();
+  }
 }
