@@ -9,6 +9,8 @@ export class ControlsComponent  implements OnInit {
 
   @ViewChild('canvas', {static: false}) canvas!: ElementRef<HTMLCanvasElement>;
 
+  state : string = 'idle';
+
   constructor() { }
 
   ngOnInit() {}
@@ -17,8 +19,10 @@ export class ControlsComponent  implements OnInit {
   ctx: any;
   img : HTMLImageElement = new Image();
 
-  ypos : number = 0;
-  xpos : number = 0;
+  ypos : number = 500;
+  xpos : number = 200;
+
+  steps : number = 30;
 
 
   limitsX : number[] = [0, 70];
@@ -26,10 +30,12 @@ export class ControlsComponent  implements OnInit {
 
   moveToRight : boolean = true;
 
+  automaticInterval : any;
+
   ngAfterViewInit() {
     this.ctx = this.canvas.nativeElement.getContext('2d');
 
-     this.img.src = 'assets/example.jpeg';
+     this.img.src = 'assets/example.jpg';
 
      
      this.img.onload = () => {
@@ -41,14 +47,12 @@ export class ControlsComponent  implements OnInit {
   drawImage() : void{
     const canvas = this.canvas.nativeElement;
     this.ctx.clearRect(0, 0, canvas.width, canvas.height);
-    this.ctx.drawImage(this.img, this.xpos, this.ypos, canvas.width, canvas.height, 0, 0, 1000, 1000);
-
-
+    this.ctx.drawImage(this.img, this.xpos, this.ypos, 5000, this.img.height ,0,0,500,500);
 
     const mark = new Image();
     mark.src = 'assets/mark.png';
-     mark.onload = () => {
-     this.ctx.drawImage(mark, 0, 0, this.canvas.nativeElement.width, this.canvas.nativeElement.height);
+    mark.onload = () => {
+      this.ctx.drawImage(mark, 0, 0, this.canvas.nativeElement.width, this.canvas.nativeElement.height);
     }
   }
 
@@ -65,15 +69,43 @@ export class ControlsComponent  implements OnInit {
 
     console.log(`y position: ${this.xpos}`);
 
-    if(this.moveToRight) return 10;
-    else return -10;
+    if(this.moveToRight) return this.steps;
+    else return -this.steps;
   }
 
   automaticMove() : void {
-    setInterval(() => {
+    this.automaticInterval = setInterval(() => {
       this.moveImage(this.getNumToIcrementAutomatic(),0);
       console.log(`moving to ${this.moveToRight}`);
     }, 1000);
   }
+
+  changeState(newstate : string) : void {
+    this.state = newstate;
+    if(this.state == 'automatic') this.automaticMove();
+    else clearInterval(this.automaticInterval);
+  }
+
+
+  timeoutHandler : any;
+
+  mouseDownFun() : void {
+    console.log('Mouse down');
+    this.timeoutHandler = setTimeout(() => {
+      this.timeoutHandler = null;
+      console.log('Holding');
+    }, 300);
+  }
+
+
+
+  mouseUpFun() : void {
+    if(this.timeoutHandler){
+      clearTimeout(this.timeoutHandler);
+      this.timeoutHandler = null;
+    }
+  }
+
+  
 
 }

@@ -3,10 +3,28 @@
   <canvas class="my-canvas" #canvas></canvas>
 </div>
 <br>
-<!--
-  <button (click)="moveImage()">something</button>
-  -->
   <div class="buttons">
-    <button>Remote</button>
-    <button (click)="automaticMove()">Automatic</button>
+    <section class="buttons-subcontainer">
+      <div>
+        <button (click)="changeState('remote')">Remote</button>
+        <button id="leftrow" *ngIf="state == 'remote' " 
+         (click)="this.moveImage(-10,0)" (mousedown)="mouseDownFun()" (mouseup)="mouseUpFun()">
+          <img src="assets/leftrow.png" alt="" class="row" >
+        </button>
+      </div>
+    </section>
+
+    <section class="buttons-subcontainer">
+      <div>
+        <button (click)="changeState('automatic')" >Automatic</button>
+        <button *ngIf="state == 'remote'" (click)="this.moveImage(10,0)">
+          <img src="assets/rightrow.png" alt="" class="row">
+        </button>
+      </div>
+    </section>
+
+
+  </div>
+  <div class="radar-container" *ngIf="state == 'remote'">
+    <img src="assets/radar.png" alt="radar" class="radar">
   </div>

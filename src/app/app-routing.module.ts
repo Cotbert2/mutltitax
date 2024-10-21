@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 import { SplashScreenComponent } from './splash-screen/splash-screen.component';
 import { StartComponent } from './start/start.component';
+import { FullControlComponent } from './full-control/full-control.component';
 
 
 const routes: Routes = [
@@ -21,6 +22,10 @@ const routes: Routes = [
   ,{
     path: 'start',
     component: StartComponent
+  },
+  {
+    path: 'full-control',
+    component: FullControlComponent
   },
   {
     path: 'main',

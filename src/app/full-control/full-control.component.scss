@@ -1,0 +1,75 @@
+.full-container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 0px 5rem;
+}
+
+.mark{
+    width: 100%;
+    height: 100%;
+    background: url('/assets/background.png');
+    padding: 1rem 1rem;
+}
+
+.content{
+    width: 100%;
+    height: 100%;
+    border: solid 5px #F15A29;
+}
+
+.planet-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 90%;
+}
+
+.chargeLogo {
+    display: flex;
+    justify-content: right;
+    align-self: center;
+    width: 100%;
+    height: auto;
+}
+
+
+.planet-viewer {
+    width: 90%;
+    height: 90%;
+}
+
+.df{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.vertical-buttons{
+    display: flex;
+    align-items: center;
+    justify-self: center;
+}
+
+.vertical-buttons div button{
+    margin-bottom: 10%;
+    margin-left: 30%;
+    width: 50%;
+}
+
+
+button{
+    background-color: rgb(241,90,41,0);
+}
+
+.controlls{
+    width: 20%;
+    position: absolute;
+    bottom: 10%;
+    left: 17%;
+}
