@@ -98,14 +98,23 @@ export class MapsComponent  implements OnInit {
   }
 
   changeMapType(src:string) : void {
+    this.playSoundSection('assets/audio/internal_section.mp3');
     this.imageSrc = src;
     this.imageInfo.img.src = this.imageSrc;
     this.imageInfo.img.onload = () => this.drawImage();
   }
 
+
   changeMapRadiation() : void {
     console.log("changing map");
     if(this.imageSrc == 'assets/mapa3.jpeg') this.changeMapType('assets/mapa4.jpeg');
     else if (this.imageSrc == 'assets/mapa4.jpeg') this.changeMapType('assets/mapa3.jpeg');
+  }
+
+  private playSoundSection(url : string) : void {
+    const audio = new Audio();
+    audio.src = url;
+    audio.load();
+    audio.play();
   }
 }

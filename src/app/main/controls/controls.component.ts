@@ -81,6 +81,7 @@ export class ControlsComponent  implements OnInit {
   }
 
   changeState(newstate : string) : void {
+    this.playSoundSection('assets/audio/internal_section.mp3');
     this.state = newstate;
     if(this.state == 'automatic') this.automaticMove();
     else clearInterval(this.automaticInterval);
@@ -110,6 +111,12 @@ export class ControlsComponent  implements OnInit {
     window.location.href = '/full-control';
   }
 
-  
+
+  private playSoundSection(url : string) : void {
+    const audio = new Audio();
+    audio.src = url;
+    audio.load();
+    audio.play();
+  }
 
 }

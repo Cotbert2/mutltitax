@@ -1,17 +1,18 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-splash-screen',
-  templateUrl: './splash-screen.component.html',
-  styleUrls: ['./splash-screen.component.scss'],
+  selector: 'app-splash',
+  templateUrl: './splash.page.html',
+  styleUrls: ['./splash.page.scss'],
 })
-export class SplashScreenComponent  implements OnInit {
+export class SplashPage implements OnInit {
 
 
   isFirstSplashScreen : boolean = true;
 
   textToPrint : string = `
-  root@minex:~$ whoami </br>
+
+  root@minex:~$ whoami
     "I don't know"
   root@minex:~$ pwd
     /home/minex
@@ -41,8 +42,6 @@ export class SplashScreenComponent  implements OnInit {
   Welcome to Multitax
   `
 
-  constructor() { }
-
   currentText : string = '';
 
   addText() : void {
@@ -52,9 +51,23 @@ export class SplashScreenComponent  implements OnInit {
     }, 200);
   }
 
+  constructor() { }
+
   ngOnInit() {
 
-    setTimeout(() => this.isFirstSplashScreen = false, 3000);
+    setTimeout(() => {
+      this.isFirstSplashScreen = false
+      this.addText();
+    }, 3000)
+
+    //change the time to 3000ms
+    /*
+    setTimeout(() => {
+      window.location.href = '/start';
+    },3000);
+    */
+
+    ///setTimeout(() => this.isFirstSplashScreen = false, 3000);
   }
 
 }
