@@ -1,10 +1,13 @@
 <div class="full-container">
+  <div [ngClass]="{'noise' : isNoise, 'noise2' : !isNoise}" >
   <div class="mark">
+    <!--conditinal class to noise-->
+
     <section class="content">
 
-      <section class="chargeLogo">
-        <img src="assets/chargeLogo.png" alt="charge logo">
-      </section>
+        <section class="chargeLogo">
+          <img src="assets/chargeLogo.png" alt="charge logo">
+        </section>
 
       <section class="interaction">
         <div class="buttons">
@@ -29,5 +32,7 @@
 
 
     </section>
+    </div>
   </div>
-</div>
+  </div>
+

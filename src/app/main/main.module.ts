@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ControlContainer, FormsModule } from '@angular/forms';
-import { PinchZoomComponent } from 'ngx-pinch-zoom';
 
 import { IonicModule } from '@ionic/angular';
 

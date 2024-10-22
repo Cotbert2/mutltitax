@@ -7,14 +7,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MainPage implements OnInit {
 
+  isNoise : boolean = false;
+
   generalStatus : string = 'welcome';
 
   constructor() { }
 
   ngOnInit() : void {
 
-    //TODO: Uncomment this line to play the background sound
-    //this.playLoopAudio('assets/audio/background_sound.mp3');
+    setInterval(() => {
+      this.isNoise = !this.isNoise;
+    }, 500);
+
+
+    this.playLoopAudio('assets/audio/background_sound.mp3');
   }
 
 

@@ -1,3 +1,6 @@
+
+//array of noises images
+
 .full-container{
     width: 100%;
     height: 100%;
@@ -68,4 +71,41 @@ button{
 .pannel{
     overflow-y: auto;
     height: 90%;
+}
+
+.noise{
+    position: relative;
+    overflow: hidden;
+}
+
+.noise ::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; 
+    background-image: url('/assets/noise.png');
+    opacity: 0.2;
+    mix-blend-mode: overlay;
+}
+
+
+.noise2{
+    position: relative;
+    overflow: hidden;
+}
+
+.noise2 ::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; 
+    background-image: url('/assets/noise2.png');
+    opacity: 0.2;
+    mix-blend-mode: overlay;
 }
