@@ -13,7 +13,14 @@ export class StartComponent  implements OnInit {
 
   start() : void {
     console.log('Starting application');
+    this.playSoundSection('assets/audio/section_sound.mp3');
     window.location.href = '/main';
+  }
+  private playSoundSection(url : string) : void {
+    const audio = new Audio();
+    audio.src = url;
+    audio.load();
+    audio.play();
   }
 
 }

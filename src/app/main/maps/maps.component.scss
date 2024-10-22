@@ -6,7 +6,7 @@
 }
 
 
-button{
+.button{
     font-family: 'stud-chaos', sans-serif;
     font-size: 1.5rem;
     margin: 0.5rem 0.5rem;
@@ -20,6 +20,27 @@ button{
 .map-viewer{
     background-color: #000000;
     width: 100%;
-    height: 80%;
+    height: 70%;
     touch-action: none;
+}
+
+.container{
+    width: 90%;
+}
+
+.full-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button-selected{
+    font-family: 'stud-chaos', sans-serif;
+    font-size: 1.5rem;
+    margin: 0.5rem 0.5rem;
+    background-color: #DC752A;
+    height: 4rem;
+    width: 8rem;
+    color: #000000;
+    border-radius: 0px 0px 1rem 0px;
 }

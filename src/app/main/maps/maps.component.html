@@ -1,10 +1,13 @@
-<div class="container">
-  <section>
-    <canvas class="map-viewer" #canvas  (click)="changeMapRadiation()"></canvas>
-  </section>
-  <section>
-    <button class="type-view" (click)="changeMapType('assets/mapa.jpeg')" >geologic</button>
-    <button class="type-view" (click)="changeMapType('assets/mapa2.jpeg')">scan</button>
-    <button class="type-view" (click)="changeMapType('assets/mapa3.jpeg')">weather</button>
-  </section>
+<div class="full-container">
+
+  <div class="container">
+    <section>
+      <canvas class="map-viewer" #canvas  (click)="changeMapRadiation()"></canvas>
+    </section>
+    <section class="buttons">
+      <button [ngClass]="{'button' : imageSrc != 'assets/mapa.jpeg', 'button-selected' : imageSrc == 'assets/mapa.jpeg'}"  (click)="changeMapType('assets/mapa.jpeg')" >geologic</button>
+      <button  [ngClass]="{'button' : imageSrc != 'assets/mapa2.jpeg', 'button-selected' : imageSrc == 'assets/mapa2.jpeg'}" (click)="changeMapType('assets/mapa2.jpeg')">scan</button>
+      <button  [ngClass]="{'button' : imageSrc != 'assets/mapa3.jpeg', 'button-selected' : imageSrc == 'assets/mapa3.jpeg'}" (click)="changeMapType('assets/mapa3.jpeg')">weather</button>
+    </section>
+  </div>
 </div>

@@ -12,21 +12,17 @@
       <section class="interaction">
         <div class="buttons">
           <!--Delete opacy if is Selected-->
-          <button (click)="changeStatus('Community')">Community</button>
-          <button (click)="changeStatus('Controls')">Controls</button>
-          <button (click)="changeStatus('Maps')">Maps</button>
-          <button (click)="changeStatus('User')">User</button>
+          <button [ngClass]="{'button' : generalStatus != 'Community',  'selected-button' : generalStatus == 'Community'}"  (click)="changeStatus('Community')">Community</button>
+          <button [ngClass]="{'button' : generalStatus != 'Controls',  'selected-button' : generalStatus == 'Controls'}" (click)="changeStatus('Controls')">Controls</button>
+          <button [ngClass]="{'button' : generalStatus != 'Maps',  'selected-button' : generalStatus == 'Maps'}" (click)="changeStatus('Maps')">Maps</button>
+          <button [ngClass]="{'button' : generalStatus != 'User',  'selected-button' : generalStatus == 'User'}" (click)="changeStatus('User')">User</button>
         </div>
         <div class="pannel">
-          <!--
-            -->
-            <!--
-              -->
-              <app-controls *ngIf="generalStatus == 'Controls'"></app-controls>
-              <app-greeting *ngIf="generalStatus=='welcome' "></app-greeting>
-              <app-maps *ngIf="generalStatus == 'Maps'"></app-maps>
-              <app-comunity-content *ngIf="generalStatus == 'Community'"></app-comunity-content>
-              <app-user *ngIf="generalStatus == 'User'"></app-user>
+          <app-controls *ngIf="generalStatus == 'Controls'"></app-controls>
+          <app-greeting *ngIf="generalStatus=='welcome' "></app-greeting>
+          <app-maps *ngIf="generalStatus == 'Maps'"></app-maps>
+          <app-comunity-content *ngIf="generalStatus == 'Community'"></app-comunity-content>
+          <app-user *ngIf="generalStatus == 'User'"></app-user>
         </div>
       </section>
 

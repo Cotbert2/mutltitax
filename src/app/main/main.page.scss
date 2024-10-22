@@ -33,7 +33,8 @@
 }
 
 
-button{
+
+.button{
     font-family: 'stud-chaos', sans-serif;
     font-size: 2rem;
     margin: 0px 0.5rem 1rem 0;
@@ -48,9 +49,7 @@ button{
     width: 30%;
     height: 100%;
 }
-.pannel{
-    width: 70%;
-}
+
 
 
 .chargeLogo {
@@ -69,8 +68,9 @@ button{
 
 
 .pannel{
+    width: 70%;
     overflow-y: auto;
-    height: 90%;
+    height: 19rem;
 }
 
 .noise{
@@ -85,7 +85,7 @@ button{
     left: 0;
     width: 100%;
     height: 100%;
-    pointer-events: none; 
+    pointer-events: none;
     background-image: url('/assets/noise.png');
     opacity: 0.2;
     mix-blend-mode: overlay;
@@ -104,8 +104,20 @@ button{
     left: 0;
     width: 100%;
     height: 100%;
-    pointer-events: none; 
+    pointer-events: none;
     background-image: url('/assets/noise2.png');
     opacity: 0.2;
     mix-blend-mode: overlay;
+}
+
+
+.selected-button{
+    font-family: 'stud-chaos', sans-serif;
+    font-size: 2rem;
+    margin: 0px 0.5rem 1rem 0;
+    background-color: #ffffff;
+    height: 4rem;
+    width: 12rem;
+    color: #000000;
+    border-radius: 0px 0px 1rem 0px;
 }

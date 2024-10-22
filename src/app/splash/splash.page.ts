@@ -77,7 +77,7 @@ export class SplashPage implements OnInit {
 
       if (this.textToPrint.length == 0) {
         clearInterval(this.typingInterval);
-        window.location.href = '/main';
+        window.location.href = '/start';
       }
     }, 10);
   }

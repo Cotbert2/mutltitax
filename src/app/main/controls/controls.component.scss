@@ -10,7 +10,7 @@
     width: 80%;
 }
 
-button{
+.button{
     font-family: 'stud-chaos', sans-serif;
     font-size: 2rem;
     margin: 0px 0.5rem 1rem 0;
@@ -21,6 +21,7 @@ button{
     border-radius: 0px 0px 1rem 0px;
     margin-left: 10%;
 }
+
 
 .right-buttons{
     //center without flexbox
@@ -76,7 +77,19 @@ button{
 }
 
 .radar-container img{
-    width: 80%;
+    width: 60%;
     margin: 1rem;
     padding: 1rem;
+}
+
+.button-selected{
+    font-family: 'stud-chaos', sans-serif;
+    font-size: 2rem;
+    margin: 0px 0.5rem 1rem 0;
+    background-color: #DC752A;
+    height: 4rem;
+    width: 12rem;
+    color: #000000;
+    border-radius: 0px 0px 1rem 0px;
+    margin-left: 10%;
 }

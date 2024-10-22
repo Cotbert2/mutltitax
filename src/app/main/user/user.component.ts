@@ -17,6 +17,14 @@ export class UserComponent  implements OnInit {
 
   changeUserStatus (newUserStatus : string) : void {
     this.userStatus = newUserStatus;
+    this.playSoundSection('assets/audio/internal_section.mp3');
+  }
+
+  private playSoundSection(url : string) : void {
+    const audio = new Audio();
+    audio.src = url;
+    audio.load();
+    audio.play();
   }
 
 }

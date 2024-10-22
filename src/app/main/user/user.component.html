@@ -1,10 +1,12 @@
 <div class="container">
-  <app-default *ngIf="userStatus == 'default'"></app-default>
-  <app-place *ngIf="userStatus=='place'"></app-place> 
-  <app-suit *ngIf="userStatus == 'suit'"></app-suit>
+  <div class="sub-interface">
+    <app-default *ngIf="userStatus == 'default'"></app-default>
+    <app-place *ngIf="userStatus=='place'"></app-place>
+    <app-suit *ngIf="userStatus == 'suit'"></app-suit>
+  </div>
   <div class="buttons">
-    <button (click)="changeUserStatus('default')">general</button>
-    <button (click)="changeUserStatus('place')">place</button>
-    <button (click)="changeUserStatus('suit')">suit</button>
+    <button [ngClass]="{'button' : userStatus != 'default', 'button-selected' : userStatus == 'default', }" (click)="changeUserStatus('default')">general</button>
+    <button [ngClass]="{'button' : userStatus != 'place', 'button-selected' : userStatus == 'place', }" (click)="changeUserStatus('place')">place</button>
+    <button [ngClass]="{'button' : userStatus != 'suit', 'button-selected' : userStatus == 'suit', }" (click)="changeUserStatus('suit')">suit</button>
   </div>
 </div>
