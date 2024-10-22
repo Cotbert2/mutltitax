@@ -1,23 +1,23 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
-import { SplashScreenComponent } from './splash-screen/splash-screen.component';
 import { StartComponent } from './start/start.component';
 import { FullControlComponent } from './full-control/full-control.component';
+import { SplashPage } from './splash/splash.page';
 
 
 const routes: Routes = [
   {
     path: 'home',
-    loadChildren: () => import('./splash-screen/splash-screen.component').then( m => m.SplashScreenComponent)
+    loadChildren: () => import('./splash/splash-routing.module').then( m => m.SplashPageRoutingModule)
   },
   {
     path: '',
-    redirectTo: 'splash-screen',
+    redirectTo: 'splash',
     pathMatch: 'full'
   },
   {
-    path: 'splash-screen',
-    component: SplashScreenComponent
+    path: 'splash',
+    component: SplashPage
   }
   ,{
     path: 'start',

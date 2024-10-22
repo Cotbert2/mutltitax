@@ -9,7 +9,6 @@ import { AppRoutingModule } from './app-routing.module';
 
 
 import { MapViewComponent } from './map-view/map-view.component';
-import { SplashScreenComponent } from './splash-screen/splash-screen.component';
 
 @NgModule({
   declarations: [AppComponent],

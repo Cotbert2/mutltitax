@@ -12,7 +12,9 @@ export class MainPage implements OnInit {
   constructor() { }
 
   ngOnInit() : void {
-    this.playLoopAudio('assets/audio/background_sound.mp3');
+
+    //TODO: Uncomment this line to play the background sound
+    //this.playLoopAudio('assets/audio/background_sound.mp3');
   }
 
 
