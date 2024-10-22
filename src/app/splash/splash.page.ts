@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-splash',
@@ -7,6 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SplashPage implements OnInit {
 
+  @ViewChild('letters') letters!: ElementRef<HTMLTextAreaElement>;
+
+  updateScroll(){
+    const textArea = this.letters.nativeElement;
+    textArea.scrollTop = textArea.scrollHeight;
+  }
 
   isFirstSplashScreen : boolean = true;
 
@@ -38,27 +44,49 @@ export class SplashPage implements OnInit {
   [+] Minex OS is ready to use ;)
   root@minex:~$ systemctl status backToHome
   the service is not exist
-
+  root@minex:~$ systemctl status multitax
+  the service is running
+  /-/ checking for updates of survivors
+  root@minex:~$
+  root@minex:~$
+  root@minex:~$
+  root@minex:~$
+  root@minex:~$
+  root@minex:~$
+  root@minex:~$
+  root@minex:~$
+  root@minex:~$
+  root@minex:~$
+  root@minex:~$ shutdown -h now
+  [-] You don't have permission to shutdown the system
+  [-] You just work for Minex
+  root@minex:~$ echo "You belong Us" > /dev/null
+  root@minex:~$ echo "You belong Us" > /dev/null
+  root@minex:~$ echo "You belong Us" > /dev/null
   Welcome to Multitax
   `
 
   currentText : string = '';
+  typingInterval : any;
 
   addText() : void {
-    setInterval(() => {
+    this.typingInterval = setInterval(() => {
+      this.updateScroll();
       this.currentText += this.textToPrint[0];
       this.textToPrint = this.textToPrint.substring(1);
-    }, 200);
+
+      if (this.textToPrint.length == 0) {
+        clearInterval(this.typingInterval);
+        window.location.href = '/main';
+      }
+    }, 10);
   }
 
   constructor() { }
 
   ngOnInit() {
+    console.log(`On Init `);
 
-    setTimeout(() => {
-      this.isFirstSplashScreen = false
-      this.addText();
-    }, 3000)
 
     //change the time to 3000ms
     /*
@@ -68,6 +96,24 @@ export class SplashPage implements OnInit {
     */
 
     ///setTimeout(() => this.isFirstSplashScreen = false, 3000);
+  }
+
+  public StartSplash() : void {
+    this.playSoundPresentation('assets/audio/splash_sound.mp3');
+    setTimeout(() => {
+      this.isFirstSplashScreen = false;
+      this.addText();
+      //this.addText();
+    }, 5000);
+    this.playSoundPresentation('assets/audio/presentation.mp3');
+  }
+
+
+  private playSoundPresentation(url : string) : void {
+    const audio = new Audio();
+    audio.src = url;
+    audio.load();
+    audio.play();
   }
 
 }

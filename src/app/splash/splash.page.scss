@@ -47,3 +47,22 @@ h1{
     color: #F15A29;
     text-align: right;
 }
+
+.letter-view{
+    width: 100%;
+    height: 100%;
+}
+
+.letter{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000000;
+    color: green;
+}
+
+.letter-view{
+    padding: 0px 5rem;
+}
