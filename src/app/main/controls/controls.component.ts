@@ -106,6 +106,10 @@ export class ControlsComponent  implements OnInit {
     }
   }
 
+  openFullController() : void {
+    window.location.href = '/full-control';
+  }
+
   
 
 }

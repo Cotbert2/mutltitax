@@ -1,3 +1,10 @@
-<p>
-  maps works!
-</p>
+<div class="container">
+  <section>
+    <canvas class="map-viewer" #canvas  (click)="changeMapRadiation()"></canvas>
+  </section>
+  <section>
+    <button class="type-view" (click)="changeMapType('assets/mapa.jpeg')" >geologic</button>
+    <button class="type-view" (click)="changeMapType('assets/mapa2.jpeg')">scan</button>
+    <button class="type-view" (click)="changeMapType('assets/mapa3.jpeg')">weather</button>
+  </section>
+</div>
