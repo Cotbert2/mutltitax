@@ -14,9 +14,18 @@ export class MainPage implements OnInit {
 
   batteryLevel : string = '';
 
+  dateToShow : String = '';
+
   constructor() { }
 
   ngOnInit() : void {
+
+    setInterval(() => {
+      const currentDate = new Date();
+
+      this.dateToShow = `${this.completeDate(currentDate.getDate())}/${this.completeDate(currentDate.getMonth() + 1) }/${ this.completeDate(Number(currentDate.getFullYear()) + 44 )}`;
+      console.log('asdasd'+this.dateToShow);
+    }, 1000);
 
     setInterval(() => {
       this.isNoise = !this.isNoise;
@@ -51,6 +60,11 @@ export class MainPage implements OnInit {
     audio.load();
     audio.loop = true;
     audio.play();
+  }
+
+  completeDate (int : number) : string {
+    if(int < 10) return `0${int}`;
+    return `${int}`;
   }
 
 }

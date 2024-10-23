@@ -33,11 +33,11 @@
 
 .button{
     font-family: 'stud-chaos', sans-serif;
-    font-size: 2rem;
+    font-size: 1.5rem;
     margin: 0px 0.5rem 1rem 0;
     background-color: rgb(241,90,41,0.8);
     height: 4rem;
-    width: 12rem;
+    width: 10rem;
     color: #000000;
     border-radius: 0px 0px 1rem 0px;
 }
@@ -72,6 +72,7 @@
 
 
 .pannel{
+    padding-left: 2rem;
     width: 70%;
     overflow-y: auto;
     height: 19rem;
@@ -117,11 +118,11 @@
 
 .selected-button{
     font-family: 'stud-chaos', sans-serif;
-    font-size: 2rem;
+    font-size: 1.5rem;
     margin: 0px 0.5rem 1rem 0;
     background-color: #ffffff;
     height: 4rem;
-    width: 12rem;
+    width: 10rem;
     color: #000000;
     border-radius: 0px 0px 1rem 0px;
 }
