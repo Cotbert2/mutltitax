@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Device } from '@capacitor/device';
 
 @Component({
   selector: 'app-main',
@@ -11,6 +12,8 @@ export class MainPage implements OnInit {
 
   generalStatus : string = 'welcome';
 
+  batteryLevel : string = '';
+
   constructor() { }
 
   ngOnInit() : void {
@@ -21,6 +24,11 @@ export class MainPage implements OnInit {
 
 
     this.playLoopAudio('assets/audio/background_sound.mp3');
+    setInterval(()  => {
+    Device.getBatteryInfo().then((info) => {
+      if(info.batteryLevel != undefined) 
+        this.batteryLevel = `${info.batteryLevel * 100}%`
+    })}, 1000);
   }
 
 

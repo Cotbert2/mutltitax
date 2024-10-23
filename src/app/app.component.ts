@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { SplashScreen } from '@capacitor/splash-screen';
+import { StatusBar } from '@capacitor/status-bar';
+import { ScreenOrientation } from '@capacitor/screen-orientation';
 
 
 @Component({
@@ -8,11 +10,14 @@ import { SplashScreen } from '@capacitor/splash-screen';
   styleUrls: ['app.component.scss'],
 })
 export class AppComponent {
-  constructor() {
+  constructor(
+  ) {
     this.initializeApp();
   }
-
+  
   initializeApp() {
+    ScreenOrientation.lock({'orientation': 'landscape'});
+    StatusBar.hide();
     SplashScreen.hide();
   }
 }

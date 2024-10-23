@@ -7,7 +7,7 @@
     <section class="buttons-subcontainer">
       <div>
         <button [ngClass]="{'button' : state != 'remote', 'button-selected' : state == 'remote' }"  (click)="changeState('remote')">Remote</button>
-        <button id="leftrow" *ngIf="state == 'remote' " 
+        <button class="button" id="leftrow" *ngIf="state == 'remote' " 
          (click)="this.moveImage(-10,0)" (mousedown)="mouseDownFun()" (mouseup)="mouseUpFun()">
           <img src="assets/leftrow.png" alt="" class="row" >
         </button>
@@ -17,7 +17,7 @@
     <section class="buttons-subcontainer">
       <div>
         <button [ngClass]="{'button' : state != 'automatic', 'button-selected' : state == 'automatic' }" (click)="changeState('automatic')" >Automatic</button>
-        <button *ngIf="state == 'remote'" (click)="this.moveImage(10,0)">
+        <button class="button" *ngIf="state == 'remote'" (click)="this.moveImage(10,0)">
           <img src="assets/rightrow.png" alt="" class="row">
         </button>
       </div>
