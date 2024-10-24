@@ -13,7 +13,10 @@
         <div class="controlls">
           <section class="df">
             <section>
-                <button (click)="moveImage(-steps, 0)">
+                <button (click)="moveImage(-steps, 0)"
+                (mousedown)="onHoldStart(0)"
+                (mouseup)="onHoldEnd(0)"
+              (mouseleave)="onHoldEnd(0)">
                   <img src="assets/left.png" alt="">
                 </button>
               </section>
@@ -21,17 +24,26 @@
               <section class="vertical-buttons">
                 <div>
 
-                  <button (click)="moveImage(0, -steps)">
+                  <button (click)="moveImage(0, -steps)"
+                  (mousedown)="onHoldStart(1)"
+                  (mouseup)="onHoldEnd(1)"
+                (mouseleave)="onHoldEnd(1)">
                     <img src="assets/up.png" alt="">
                   </button>
-                  <button (click)="moveImage(0, steps)">
+                  <button (click)="moveImage(0, steps)"
+                  (mousedown)="onHoldStart(3)"
+                  (mouseup)="onHoldEnd(3)"
+                  (mouseleave)="onHoldEnd(3)">
                     <img src="assets/down.png" alt="">
                   </button>
                 </div>
               </section>
 
               <section>
-                <button (click)="moveImage(steps, 0)">
+                <button (click)="moveImage(steps, 0)"
+                (mousedown)="onHoldStart(2)"
+                (mouseup)="onHoldEnd(2)"
+              (mouseleave)="onHoldEnd(2)">
                   <img src="assets/right.png" alt="">
                 </button>
               </section>
@@ -50,7 +62,6 @@
       <button class="location">
         <p>{{location}}</p>
       </button>
-
     </section>
 
 

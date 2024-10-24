@@ -125,11 +125,11 @@ export class ControlsComponent  implements OnInit {
   }
 
   executeHold() : void {
-    console.log(`Holading`);
-
     this.holdingFlag.forEach((value, index) => {
-      if(value && index === 0) this.moveImage(-10,0);
-      else if(value && index === 2) this.moveImage(10,0);
+      if(value && index === 0) this.moveImage(-this.steps,0);
+      else if(value && index === 1) this.moveImage(0,this.steps);
+      else if(value && index === 2) this.moveImage(this.steps,0);
+      else if(value && index === 3) this.moveImage(0,-this.steps);
 
     })
     //0: left, 1: up, 2: right, 3 :down

@@ -38,8 +38,9 @@ export class FullControlComponent  implements OnInit {
   }
 
   ngOnInit() {
+    this.checkForEvenetsHolding();
     console.log('Full control component loaded');
-    
+  
     setInterval(() => {
       this.formLocation();
     }, 1000);
@@ -76,5 +77,34 @@ export class FullControlComponent  implements OnInit {
     this.ypos += yIncrement;
     this.xpos += xIncrement;
     this.drawImage();
+  }
+
+  
+  holdingFlag : boolean[] = [false, false,false,false];
+
+
+  checkForEvenetsHolding() : void {
+    setInterval(() => {
+      this.executeHold();
+    },100)
+  }
+
+  onHoldStart(indexId : number) : void {
+    this.holdingFlag[indexId] = true;
+  }
+
+  onHoldEnd(indexId : number) : void {
+    this.holdingFlag[indexId] = false;
+  }
+
+  executeHold() : void {
+    //0: left, 1: up, 2: right, 3 :down
+    this.holdingFlag.forEach((value, index) => {
+      if(value && index === 0) this.moveImage(-this.steps,0);
+      else if(value && index === 1) this.moveImage(0,-this.steps);
+      else if(value && index === 2) this.moveImage(this.steps,0);
+      else if(value && index === 3) this.moveImage(0,this.steps);
+    })
+    
   }
 }
