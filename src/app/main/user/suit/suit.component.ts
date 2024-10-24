@@ -28,13 +28,6 @@ export class SuitComponent  implements OnInit {
 
   ngOnInit() {
     this.temperature = this.generateRandomNumber(0, 1);
-
-    setInterval(() => {
-      this.acceleration.x = this.generateRandomNumber(0, 1);
-      this.acceleration.y = this.generateRandomNumber(0, 1);
-      this.acceleration.z = this.generateRandomNumber(0, 1);
-    }, 100);
-
     setInterval(() => {
       //get just 5 decimal numbers
       this.pulse1 = `${this.generateRandomNumber(12.00, 12.99)}`.substring(0, 6); 
