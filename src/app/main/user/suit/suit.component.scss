@@ -40,3 +40,16 @@
     width: 2rem;
     height: 2rem;
 }
+
+.radiation-container{
+    height: 40%;
+    width:  auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.3rem;
+}
+
+.radiation{
+    height: 100%;
+}

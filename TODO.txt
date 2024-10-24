@@ -1,7 +1,7 @@
 Holding  buttons
-Change X in controls
-Redistibution Suit
+Change X in controls (Done)
+Redistibution Suit (Done)
 Brujula (Posible)
-User(General de Suit)
+User(General de Suit) (Done)
 Cambiar fecha -> Bateria (Done)
 Batery en Suit
