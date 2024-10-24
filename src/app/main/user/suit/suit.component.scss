@@ -23,3 +23,20 @@
     font-family: 'stud-chaos', sans-serif;
 
 }
+
+.temperature{
+    padding: 1rem;
+    background: url('/assets/temperature.png');
+    background-size: cover;
+}
+
+.pulso{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.pulso img{
+    width: 2rem;
+    height: 2rem;
+}

@@ -20,5 +20,25 @@
       <ion-progress-bar [value]="acceleration.z"></ion-progress-bar>
     </section>
   </section>
+
+
+  <section>
+    <p>C/F Temperature</p>
+    <section class="temperature">
+      <ion-progress-bar  [value]="temperature"></ion-progress-bar>
+    </section>
+
+    <section>
+      <section class="pulso">
+        <img src="assets/heart_red.png" alt="reds heart">
+        <p>{{pulse1}}</p>
+      </section>
+      <section class="pulso">
+        <img src="assets/heart_white.png" alt="reds heart">
+        <p>{{pulse2}}</p>
+      </section>
+    </section>
+  </section>
+
     <!--Aceleremother test-->
 </div>
