@@ -1,3 +1,24 @@
-<div class="container">
-  <img src="assets/suit.png" alt="suit" class="suit-image">
+<div class="full-container">
+  <img src="assets/side-spaceman.png" alt="side space man" class="spaceman">
+
+
+  <section class="acelerations">
+    <p>Acelerations</p>
+
+    <section class="axis">
+      <ion-label>X Axis:</ion-label>
+      <ion-progress-bar [value]="acceleration.x" ></ion-progress-bar>
+    </section>
+
+    <section class="axis">
+      <ion-label>Y Axis:</ion-label>
+      <ion-progress-bar [value]="acceleration.y"></ion-progress-bar>
+    </section>
+
+    <section class="axis">
+      <ion-label>Z Axis:</ion-label>
+      <ion-progress-bar [value]="acceleration.z"></ion-progress-bar>
+    </section>
+  </section>
+    <!--Aceleremother test-->
 </div>

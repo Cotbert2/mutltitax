@@ -1,11 +1,25 @@
-.container{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.full-container{
     width: 100%;
-    height: auto;
+    height: 100%;
+    display: flex;
 }
 
-.suit-image{
-    width: 70%;
+.spaceman{
+    height: 12rem;
+}
+
+.sensors{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.acelerations{
+    margin: 1rem;
+}
+
+
+*{
+    font-family: 'stud-chaos', sans-serif;
+
 }

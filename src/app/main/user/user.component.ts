@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Motion } from '@capacitor/motion';
 
 @Component({
   selector: 'app-user',
