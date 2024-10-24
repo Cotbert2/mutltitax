@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { Device } from '@capacitor/device';
 
 @Component({
@@ -7,6 +7,7 @@ import { Device } from '@capacitor/device';
   styleUrls: ['./main.page.scss'],
 })
 export class MainPage implements OnInit {
+
 
   isNoise : boolean = false;
 
@@ -42,6 +43,7 @@ export class MainPage implements OnInit {
 
 
   changeStatus(newStatus : string) : void {
+
     this.generalStatus = newStatus;
     this.playSoundSection('assets/audio/section_sound.mp3');
   }

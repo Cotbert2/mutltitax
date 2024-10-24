@@ -21,7 +21,7 @@ export class DefaultComponent  implements OnInit {
 
     setInterval(() => {
       this.setPulse();
-    }, 5000);
+    }, 100);
   }
 
 

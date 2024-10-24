@@ -19,9 +19,17 @@
 
 .map-viewer{
     background-color: #000000;
-    width: 100%;
-    height: 70%;
     touch-action: none;
+    width: 100%;
+    height: 13rem;
+}
+
+.view-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
 }
 
 .container{

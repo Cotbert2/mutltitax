@@ -3,5 +3,5 @@ Change X in controls
 Redistibution Suit
 Brujula (Posible)
 User(General de Suit)
-Cambiar fecha -> Bateria
+Cambiar fecha -> Bateria (Done)
 Batery en Suit

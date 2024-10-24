@@ -6,8 +6,8 @@
     <section class="content">
 
         <section class="chargeLogo">
-          <p>{{batteryLevel}}</p>
           <p>{{dateToShow}}</p>
+          <p>{{batteryLevel}}</p>
           <img src="assets/chargeLogo.png" alt="charge logo">
         </section>
 
@@ -19,7 +19,7 @@
           <button [ngClass]="{'button' : generalStatus != 'Maps',  'selected-button' : generalStatus == 'Maps'}" (click)="changeStatus('Maps')">Maps</button>
           <button [ngClass]="{'button' : generalStatus != 'User',  'selected-button' : generalStatus == 'User'}" (click)="changeStatus('User')">User</button>
         </div>
-        <div class="pannel">
+        <div class="pannel" #pannel>
           <app-controls *ngIf="generalStatus == 'Controls'"></app-controls>
           <app-greeting *ngIf="generalStatus=='welcome' "></app-greeting>
           <app-maps *ngIf="generalStatus == 'Maps'"></app-maps>

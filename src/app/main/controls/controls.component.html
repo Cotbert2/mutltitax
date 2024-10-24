@@ -16,7 +16,7 @@
 
     <section class="buttons-subcontainer">
       <div>
-        <button [ngClass]="{'button' : state != 'automatic', 'button-selected' : state == 'automatic' }" (click)="changeState('automatic')" >Automatic</button>
+        <button [ngClass]="{'button' : state != 'automatic', 'button-selected' : state == 'automatic' }" (click)="changeState('automatic')" >Auto</button>
         <button class="button" *ngIf="state == 'remote'" (click)="this.moveImage(10,0)">
           <img src="assets/rightrow.png" alt="" class="row">
         </button>
