@@ -1,4 +1,5 @@
 <!--Canvas to scroll large images with buttons-->
+
 <div class="view-container">
   <canvas (click)="openFullController()"  class="my-canvas" #canvas></canvas>
 </div>
@@ -8,7 +9,8 @@
       <div>
         <button [ngClass]="{'button' : state != 'remote', 'button-selected' : state == 'remote' }"  (click)="changeState('remote')">Remote</button>
         <button class="button" id="leftrow" *ngIf="state == 'remote' " 
-         (click)="this.moveImage(-10,0)" (mousedown)="mouseDownFun()" (mouseup)="mouseUpFun()">
+         (click)="this.moveImage(-10,0)" 
+         (mousedown)="onHoldStart(0)" (mouseup)="onHoldEnd(0)" (mouseleve)="onHoldEnd(0)">
           <img src="assets/leftrow.png" alt="" class="row" >
         </button>
       </div>
@@ -17,7 +19,8 @@
     <section class="buttons-subcontainer">
       <div>
         <button [ngClass]="{'button' : state != 'automatic', 'button-selected' : state == 'automatic' }" (click)="changeState('automatic')" >Auto</button>
-        <button class="button" *ngIf="state == 'remote'" (click)="this.moveImage(10,0)">
+        <button class="button" *ngIf="state == 'remote'" (click)="this.moveImage(10,0)"
+        (mousedown)="onHoldStart(2)" (mouseup)="onHoldEnd(2)" (mouseleve)="onHoldEnd(2)">
           <img src="assets/rightrow.png" alt="" class="row">
         </button>
       </div>

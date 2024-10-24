@@ -13,7 +13,9 @@ export class ControlsComponent  implements OnInit {
 
   constructor() { }
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.checkForEvenetsHolding();
+  }
 
 
   ctx: any;
@@ -90,22 +92,6 @@ export class ControlsComponent  implements OnInit {
 
   timeoutHandler : any;
 
-  mouseDownFun() : void {
-    console.log('Mouse down');
-    this.timeoutHandler = setTimeout(() => {
-      this.timeoutHandler = null;
-      console.log('Holding');
-    }, 300);
-  }
-
-
-
-  mouseUpFun() : void {
-    if(this.timeoutHandler){
-      clearTimeout(this.timeoutHandler);
-      this.timeoutHandler = null;
-    }
-  }
 
   openFullController() : void {
     window.location.href = '/full-control';
@@ -118,5 +104,38 @@ export class ControlsComponent  implements OnInit {
     audio.load();
     audio.play();
   }
+
+
+  holdingFlag : boolean[] = [false, false,false,false];
+
+
+  checkForEvenetsHolding() : void {
+    setInterval(() => {
+      this.executeHold();
+    },100)
+  }
+
+
+  onHoldStart(indexId : number) : void {
+    this.holdingFlag[indexId] = true;
+  }
+
+  onHoldEnd(indexId : number) : void {
+    this.holdingFlag[indexId] = false;
+  }
+
+  executeHold() : void {
+    console.log(`Holading`);
+
+    this.holdingFlag.forEach((value, index) => {
+      if(value && index === 0) this.moveImage(-10,0);
+      else if(value && index === 2) this.moveImage(10,0);
+
+    })
+    //0: left, 1: up, 2: right, 3 :down
+    
+  }
+
+
 
 }
