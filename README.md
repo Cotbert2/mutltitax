@@ -12,6 +12,14 @@ Multitax is a cross-platform application, helping (fictional) Minex employees to
 - [x] Sensors Statistics
 - [x] Maps View in different layers **Radiation**, **Geological**, **Weather**, **Scan**
 
+## Views
+
+![SplashScreen](./presentation/splash.png)
+![BNooting](./presentation/booting.png)
+![Shuit](./presentation/suit.png)
+![Maps](./presentation/maps.png)
+![Controls](./presentation/controls.png)
+
 
 ## Run application
 
