@@ -14,8 +14,8 @@
           <section class="df">
             <section>
                 <button (click)="moveImage(-steps, 0)"
-                (mousedown)="onHoldStart(0)"
-                (mouseup)="onHoldEnd(0)"
+                (touchstart)="onHoldStart(0)"
+                (touchend)="onHoldEnd(0)"
               (mouseleave)="onHoldEnd(0)">
                   <img src="assets/left.png" alt="">
                 </button>
@@ -25,14 +25,14 @@
                 <div>
 
                   <button (click)="moveImage(0, -steps)"
-                  (mousedown)="onHoldStart(1)"
-                  (mouseup)="onHoldEnd(1)"
+                  (touchstart)="onHoldStart(1)"
+                  (touchend)="onHoldEnd(1)"
                 (mouseleave)="onHoldEnd(1)">
                     <img src="assets/up.png" alt="">
                   </button>
                   <button (click)="moveImage(0, steps)"
-                  (mousedown)="onHoldStart(3)"
-                  (mouseup)="onHoldEnd(3)"
+                  (touchstart)="onHoldStart(3)"
+                  (touchend)="onHoldEnd(3)"
                   (mouseleave)="onHoldEnd(3)">
                     <img src="assets/down.png" alt="">
                   </button>
@@ -41,8 +41,8 @@
 
               <section>
                 <button (click)="moveImage(steps, 0)"
-                (mousedown)="onHoldStart(2)"
-                (mouseup)="onHoldEnd(2)"
+                (touchstart)="onHoldStart(2)"
+                (touchend)="onHoldEnd(2)"
               (mouseleave)="onHoldEnd(2)">
                   <img src="assets/right.png" alt="">
                 </button>
