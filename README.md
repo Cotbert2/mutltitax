@@ -3,7 +3,7 @@
 Multitax is a cross-platform application, helping (fictional) Minex employees to handle and manage their Mars exploration.
 
 ![Minex](./presentation/minex.jpeg)
-![Minex](./presentation/minex2.jpeg)
+![Minex](./presentation/newlogo.jpeg)
 
 ## Fic Features
 
